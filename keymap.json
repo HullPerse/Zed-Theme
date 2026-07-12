@@ -1,0 +1,101 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-d": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-shift-down": "editor::DuplicateLineDown"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-y": "workspace::ToggleAllDocks"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-y": "git_panel::Toggle"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-e": "project_panel::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-k": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-/": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "AcpThread > Editor && use_modifier_to_send",
+    "unbind": {
+      "ctrl-enter": "agent::Chat"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "unbind": {
+      "ctrl-enter": "agent::ChatWithFollow"
+    }
+  },
+  {
+    "context": "SkillCreator > Editor",
+    "unbind": {
+      "ctrl-enter": "skill_creator::SaveSkill"
+    }
+  },
+  {
+    "context": "SkillCreator",
+    "unbind": {
+      "ctrl-enter": "skill_creator::SaveSkill"
+    }
+  },
+  {
+    "context": "!AcpThread > Editor && mode == full",
+    "unbind": {
+      "ctrl-enter": "assistant::InlineAssist"
+    }
+  }
+]
